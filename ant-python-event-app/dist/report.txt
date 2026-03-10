@@ -1,0 +1,9 @@
+[VALID] Laura
+[INVALID] Pedro: ['Invalid email']
+[INVALID] Sofia: ['Attendee must be 18 or older']
+[INVALID] Juan: ['Invalid registration identifier']
+[INVALID] Carlos: ['Invalid registration identifier']
+
+Summary
+Valid attendees: 1
+Invalid attendees: 4
