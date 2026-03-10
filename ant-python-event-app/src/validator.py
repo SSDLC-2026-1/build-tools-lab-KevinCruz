@@ -6,6 +6,7 @@ def is_valid_email(email: str) -> bool:
     pattern = r"^[^@\s]+@[^@\s]+\.[^@\s]+$"
     return re.match(pattern, email) is not None
 
+#id=registration_code
 def is_valid_id(id_str: str):
     if len(id_str) != 7:
         return False
