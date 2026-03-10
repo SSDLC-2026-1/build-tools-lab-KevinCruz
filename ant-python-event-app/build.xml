@@ -38,4 +38,13 @@
             <arg value="build.xml"/>
         </exec>
     </target>
+
+    <target name="report">
+        <mkdir dir="${dist.dir}"/>
+        <echo>Generating report...</echo>
+        <exec executable="python3" output="${dist.dir}/report.txt" failonerror="true">
+            <arg value="${src.dir}/app.py"/>
+        </exec>
+        <echo>Report generated at ${dist.dir}/report.txt</echo>
+    </target>
 </project>
