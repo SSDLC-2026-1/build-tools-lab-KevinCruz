@@ -3,18 +3,35 @@
     "name": "Laura",
     "email": "laura@example.com",
     "age": 22,
-    "ticket_type": "vip"
+    "ticket_type": "vip",
+    "ID": "EV-1023"
   },
   {
     "name": "Pedro",
     "email": "pedroexample.com",
     "age": 19,
-    "ticket_type": "general"
+    "ticket_type": "general",
+    "ID": "EV-9876"
   },
   {
     "name": "Sofia",
     "email": "sofia@example.com",
     "age": 17,
-    "ticket_type": "student"
+    "ticket_type": "student",
+    "ID": "EV-0001"
+  },
+  {
+    "name": "Juan",
+    "email": "juan@example.com",
+    "age": 19,
+    "ticket_type": "student",
+    "ID": "AB-1234"
+  },
+  {
+    "name": "Carlos",
+    "email": "carlos@example.com",
+    "age": 19,
+    "ticket_type": "student",
+    "ID": "EV1023"
   }
 ]

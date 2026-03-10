@@ -8,7 +8,8 @@ class TestValidator(unittest.TestCase):
             "name": "Sara Palacios",
             "email": "sara@example.com",
             "age": 25,
-            "ticket_type": "vip"
+            "ticket_type": "vip",
+            "ID": "EV-1234"
         }
         self.assertEqual(validate_attendee(attendee), [])
 
@@ -17,7 +18,8 @@ class TestValidator(unittest.TestCase):
             "name": "Juan",
             "email": "juanexample.com",
             "age": 20,
-            "ticket_type": "general"
+            "ticket_type": "general",
+            "ID": "EV-5678"
         }
         self.assertIn("Invalid email", validate_attendee(attendee))
 
@@ -26,9 +28,29 @@ class TestValidator(unittest.TestCase):
             "name": "Ana",
             "email": "ana@example.com",
             "age": 16,
-            "ticket_type": "student"
+            "ticket_type": "student",
+            "ID": "EV-9012"
         }
         self.assertIn("Attendee must be 18 or older", validate_attendee(attendee))
+
+    def test_invalid_id(self):
+        attendee = {
+            "name": "Carlos",
+            "email": "carlos@example.com",
+            "age": 20,
+            "ticket_type": "general",
+            "ID": "AB-1234"
+        }
+        self.assertIn("Invalid registration identifier", validate_attendee(attendee))
+
+    def test_missing_id(self):
+        attendee = {
+            "name": "Maria",
+            "email": "maria@example.com",
+            "age": 22,
+            "ticket_type": "vip"
+        }
+        self.assertIn("Invalid registration identifier", validate_attendee(attendee))
 
 if __name__ == "__main__":
     unittest.main()
