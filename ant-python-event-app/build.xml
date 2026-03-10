@@ -27,7 +27,7 @@
         </exec>
     </target>
 
-    <target name="package" depends="clean,test">
+    <target name="package" depends="clean,test,report">
         <echo>Packaging project...</echo>
         <exec executable="zip" failonerror="true">
             <arg value="-r"/>
@@ -36,6 +36,7 @@
             <arg value="tests"/>
             <arg value="data"/>
             <arg value="build.xml"/>
+            <arg value="${dist.dir}/report.txt"/>
         </exec>
     </target>
 
